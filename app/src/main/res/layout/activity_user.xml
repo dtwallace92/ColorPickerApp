@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.dtwal.colorpicker.User">
+
+    <TextView
+        android:id="@+id/genre01TextView"
+        android:layout_width="0dp"
+        android:layout_height="41dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="16dp"
+        android:text="Rock"
+        android:textAlignment="center"
+        android:textSize="26dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/genre02TextView"
+        app:layout_constraintEnd_toStartOf="@+id/genre02TextView"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/genre02TextView"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginTop="194dp"
+        android:text="Pop"
+        android:textAlignment="center"
+        android:textSize="26dp"
+        app:layout_constraintEnd_toStartOf="@+id/genre03TextView"
+        app:layout_constraintStart_toEndOf="@+id/genre01TextView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/genre03TextView"
+        android:layout_width="0dp"
+        android:layout_height="41dp"
+        android:layout_marginEnd="16dp"
+        android:text="Classical"
+        android:textAlignment="center"
+        android:textSize="26dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/genre02TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/genre02TextView" />
+</android.support.constraint.ConstraintLayout>

@@ -1,32 +1,37 @@
 package com.example.dtwal.colorpicker;
 
+import android.content.Context;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-public class ColorPicker extends AppCompatActivity implements SeekBar.OnSeekBarChangeListener{
+import static com.example.dtwal.colorpicker.User.genre01;
 
-    //Reference the seek bars
-    SeekBar SeekA;
-    SeekBar SeekR;
-    SeekBar SeekG;
-    SeekBar SeekB;
-    //Reference the TextView
+public class ColorPicker extends AppCompatActivity implements SeekBar.OnSeekBarChangeListener {
+
+    SeekBar SeekA, SeekR,SeekG,SeekB;
+    Button saveColorButton, cancelColorButton;
     TextView ShowColor;
+    Integer r, g, b;
+    static int c;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_color_picker);
-        //Get a reference to the seekbars
         SeekA=findViewById(R.id.seekA);
         SeekR=findViewById(R.id.seekR);
         SeekG=findViewById(R.id.seekG);
         SeekB=findViewById(R.id.seekB);
-        //Reference the TextView
         ShowColor=findViewById(R.id.textView);
+        saveColorButton = findViewById(R.id.saveColorButton);
+        cancelColorButton = findViewById(R.id.cancelColorButton);
+
         //This activity implements SeekBar OnSeekBarChangeListener
         SeekA.setOnSeekBarChangeListener(this);
         SeekR.setOnSeekBarChangeListener(this);
@@ -58,6 +63,26 @@ public class ColorPicker extends AppCompatActivity implements SeekBar.OnSeekBarC
                 +String.format("%02x", G)+String.format("%02x", B));
         //some math so text shows (needs improvement for greys)
         ShowColor.setTextColor(Color.argb(0xff,255-R,255-G,255-B));
+
+        cancelColorButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+
+        saveColorButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                r = SeekR.getProgress();
+                g = SeekG.getProgress();
+                b = SeekB.getProgress();
+                int c = ShowColor.getSolidColor();
+
+                finish();
+            }
+        });
     }
     public void onStartTrackingTouch(SeekBar seekBar) {
         //Only required due to implements

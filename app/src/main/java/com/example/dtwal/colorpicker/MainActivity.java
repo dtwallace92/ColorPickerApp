@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     EditText email, password;
     Button login, signUp;
+    private String TAG;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,8 +58,8 @@ public class MainActivity extends AppCompatActivity {
                                     Toast.makeText(MainActivity.this, "login successful",
                                             Toast.LENGTH_SHORT).show();
 
-                                    Intent j = new Intent(MainActivity.this, ColorPicker.class);
-                                    startActivity(j);
+                                    Intent s = new Intent(MainActivity.this, User.class);
+                                    startActivity(s);
                                     //updateUI(user);
                                 } else {
                                     // If sign in fails, display a message to the user.

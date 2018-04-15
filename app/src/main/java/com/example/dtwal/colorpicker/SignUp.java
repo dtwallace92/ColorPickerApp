@@ -51,6 +51,7 @@ public class SignUp extends AppCompatActivity {
             }
         });
 
+        //Attempt to create user when Sign Up is clicked, if successful exit screen
         signUpConfirmButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -64,8 +65,6 @@ public class SignUp extends AppCompatActivity {
                     Toast.makeText(SignUp.this, "Passwords do not match", Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    //Toast.makeText(Signup.this, "we good", Toast.LENGTH_SHORT).show();
-
                     mAuth.createUserWithEmailAndPassword(signUpEmail.getText().toString(), signUpPassword.getText().toString())
                             .addOnCompleteListener(SignUp.this, new OnCompleteListener<AuthResult>() {
                                 @Override
