@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "823783997203",
+    "firebase_url": "https://colorpicker-9bfd5.firebaseio.com",
+    "project_id": "colorpicker-9bfd5",
+    "storage_bucket": "colorpicker-9bfd5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:823783997203:android:0e74e42dd36decd9",
+        "android_client_info": {
+          "package_name": "com.example.dtwal.colorpicker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "823783997203-1f5aq71qkicrq34t04uorca97bnr1vfg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.dtwal.colorpicker",
+            "certificate_hash": "db3088ca9527c8f1a0c1392f0b6423134c2274f4"
+          }
+        },
+        {
+          "client_id": "823783997203-l8phdb0k6ee5d8ji5ne1fmqub87j60b1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZlZdZHl5REA02KuxIIRdPWXjHUW7IrH8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "823783997203-l8phdb0k6ee5d8ji5ne1fmqub87j60b1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
